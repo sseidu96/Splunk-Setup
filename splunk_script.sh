@@ -1,11 +1,17 @@
 #!/bin/bash
 
+#Date : APRIL 25 2026
+#Author : Safiatu Seidu
+#modified by : SAF
+
 cd /opt
+sudo yum install wget -y
 # Download the Splunk Enterprise tar file
 sudo wget -O splunk-9.0.4.1-419ad9369127-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.0.4.1/linux/splunk-9.0.4.1-419ad9369127-Linux-x86_64.tgz"
 
 # Extract the tar file to /opt
 sudo tar -zxvf splunk-9.0.4.1-419ad9369127-Linux-x86_64.tgz -C /opt
+sudo rm -rf splunk-9.0.4.1-419ad9369127-Linux-x86_64.tgz
 
 # Change ownership of the Splunk directory to the current user
 #chown -R $(whoami):$(whoami) /opt/splunk
